@@ -9,15 +9,23 @@
 </head>
 <body>
     <div id="app">
-        {{ msg }}
+        <div> {{ msgA }} </div>
+        <button> Change! </button>
     </div>
     <script>
-        new Vue({
+        var vm = new Vue({
             el:'#app',
             data: {
-                msg: 'Hello Vue!'
+                msgA : 'Message A'
+            },
+            methods: {
+                changeMessage() {
+                    this.msgA = 'Changed message A'
+                }
             }
         })
+
+        console.log(vm);
     </script>
 </body>
 

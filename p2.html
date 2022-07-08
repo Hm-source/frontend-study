@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vue test</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <style>
+            .normal {
+                font-size: large;
+                color: red;
+            }
+            .active {
+                font-size: small;
+                color: blue;
+            }
+        </style>
+        <div id="app2">
+            <div v-if="s" :class="className" >
+                {{ msg }}
+            </div>
+            <button @click="changeColor">click</button>
+            
+        </div>
+
+        <script>
+            const vm = new Vue({
+                el: '#app2',
+                data: {
+                    msg: 'Hello Vue!',
+                    className: 'normal',
+                    s: true
+                },
+                methods: {
+                    changeColor() {
+                        this.className = 'active';
+                        this.s = !this.s;
+                    }
+                },
+                computed: {},
+                watch: {},
+                created() {
+                    console.log('created!');
+                    console.log(this.msg);
+                },
+                mounted() {
+                    console.log('mounted');
+                }
+            })
+        </script>
+    </body>
+</html>

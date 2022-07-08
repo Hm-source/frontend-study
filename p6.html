@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vue test</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <style></style>
+        <div id="app">
+            <div>{{ reversedMsg }}</div>
+            <div>{{ msg }}</div>
+        </div>
+
+        <script>
+            const vm = new Vue({
+                el: '#app',
+                data: {
+                    msg: 'Bye Vue!'
+                },
+                methods: {},
+                computed: {
+                    reversedMsg: {
+                        //Getter
+                        get() {
+                            return this
+                                .msg
+                                .split('')
+                                .reverse()
+                                .join('')
+                        },
+                        //Setter
+                        set(newMsg) {
+                            this.msg = newMsg
+                        }
+                    }
+                },
+                watch :{
+                    msg(newMsg) {
+                        console.log('New data: ' + newMsg );
+                    },
+                    reversedMsg (newMsg) {
+                        console.log('New reversed Msg: ' + newMsg );
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>
