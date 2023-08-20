@@ -1,0 +1,36 @@
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  margin: 20px;
+}
+.keyboard-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.keyboard-block {
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 50px;
+  background-color: #818384;
+  color: white;
+  font-weight: bold;
+}
+.keyboard-block-big {
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 50px;
+  background-color: #818384;
+  color: white;
+  font-weight: bold;
+}
