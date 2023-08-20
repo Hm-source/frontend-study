@@ -17,17 +17,11 @@ V8 엔진 (자바스크립트 엔진의 대표적인 예는 Google V8 엔진이�
 
 구성요소로는 js engine(call stack, heap), Web api랑 callback Queue가 있습니다.
 
-- WEB APIs
-- DOM
-- Timers
-- Fetch
-- Etc..
-
-브라우저에서 제공하는 Web API(DOM, Ajax, setTimeout, eventloop, ...) 과 event 등과 함께 동작하면서 런타임이 이루집니다.
+브라우저에서 제공하는 Web API(DOM, Ajax, setTimeout, eventloop, ...)와 event 등과 함께 동작하면서 런타임이 이루집니다.
 이벤트, DOM 이벤트, http 요청, 비동기 함수는 WEB API를 호출하며 WEB API는 콜백함수를 Callback Queue에 넣습니다.
 
 자바스크립트는 1개의 스레드로 동작하고, 1개의 call stack을 가지고 있습니다.
-스택이 1개만 있기 때문에, 1번에 1개의 작업만 실행할 수 있기 때문에 blocking이 발생할 수 있습니다.
+스택이 1개만 있고, 1번에 1개의 작업만 실행할 수 있기 때문에 blocking이 발생할 수 있습니다.
 blocking 문제는 비동기 처리를 통해 해결이 가능합니다.
 
 - javascript runtime의 콜스택에서 비동기 함수를 만나면,
