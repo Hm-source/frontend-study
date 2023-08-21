@@ -22,3 +22,6 @@
 ### React
 
 ### Nuxt
+
+### GIT
+[git message convention](https://github.com/Hm-source/frontend-study/blob/git/git_commit_convention.md)
