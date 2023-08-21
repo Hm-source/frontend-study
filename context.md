@@ -1,4 +1,4 @@
-## 실행 컨텍스트
+## 실행 컨텍스트 (Execution Context)
 
 #### 실행 컨텍스트란?
 
@@ -9,7 +9,16 @@
 - 전역으로 컨텍스트가 생성되는데 각 변수, 함수에 대해서 각각의 컨텍스트가 생성됩니다.
 
   - 그 과정에서, 함수 실행 및 콜백 기다림이 발생을 합니다.
-
+- Execution Context의 종류
+  - global execution context
+    - 단 한 개만 정의되는 전역 Context
+    - call stack 에 가장 먼저 추가되고 앱이 종료될 때 삭제된다.
+  - functional execution context
+    - 함수가 실행될 때마다 정의되는 context
+    - 함수 실행 시마다 정의되며 함수 실행이 종료되면 call stack에서 제거된다.
+  - eval context
+- 참고 : Call Stack은 최대 stack 사이즈가 정해져 있다. 최대치를 넘으면 RangeError: Maximum call stacksize exceeded라는 에러가 발생한다.(stack overflow)
+---
 #### example
 
 ```javascript
