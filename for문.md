@@ -45,6 +45,11 @@ console.log(new Date() - start)
 // forEach -> 150
 ```
 
+#### for문 vs forEach 차이
+- foreach 는 배열 요소를 순차적으로 돌면서 callback을 실행할 뿐, callback이 끝날때 까지 기다렸다가 다음 callback을 실행하지 않는다.즉, foreach 자신이 실행하는 코드가 비동기, 동기에 상관없이 계속 진행한다.
+- 그래서 순차 처리를 하려면 for문을 사용해야 한다.
+
+
 #### map
 - for 문, forEach 보다 속도는 느리다.
 - for문과 forEach와는 다르게 반환 값을 모아 새로운 배열을 반환한다.
